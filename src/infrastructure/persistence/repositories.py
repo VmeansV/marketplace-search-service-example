@@ -29,7 +29,7 @@ class SQLAlchemySearchRepository(SearchRepository):
             price=price,
             category=category,
             city=city,
-            indexed_id=func.now(),
+            indexed_at=func.now(),
         )
 
         stmt = stmt.on_conflict_do_update(
